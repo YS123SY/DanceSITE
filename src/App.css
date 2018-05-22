@@ -1,0 +1,14 @@
+.App {
+  box-sizing: content-box;
+}
+.acor-div {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+}
+.acor-items {
+  flex: 1;
+  border: 1px solid black;
+  background-size: cover;
+}
