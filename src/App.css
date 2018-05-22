@@ -4,11 +4,12 @@
 .acor-div {
   display: flex;
   justify-content: center;
-  width: 500px;
-  height: 500px;
+  width: 100%;
 }
 .acor-items {
   flex: 1;
   border: 1px solid black;
-  background-size: cover;
+  width: 25%;
+  height: 700px;
+  background-size: 100% 100%;
 }
