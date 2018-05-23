@@ -27,7 +27,7 @@ class NavBar extends React.Component {
             <option value="value5">40></option>
             <option value="value6">50></option>
           </select>
-          <input className="plc-btn" type="placeholder" value="Ville" />
+          <input className="plc-btn" placeholder="Ville" />
         </div>
         <div className="conn-insc-btn">
           <Link to="/connection">
