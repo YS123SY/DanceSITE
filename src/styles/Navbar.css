@@ -3,12 +3,13 @@
   justify-content: center;
   align-items: flex-start;
   border: 1px solid black;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(50, 50, 50, 0.4);
   height: 42px;
   width: 100%;
 }
 
 .logo {
+  display: flex;
   border: 1px solid black;
   width: 40px;
   height: 40px;
@@ -23,7 +24,9 @@
 .insc-btn {
   margin-left: 10px;
 }
-
+.slogan {
+  color: white;
+}
 ul.categories {
   position: absolute;
   top: 50%;
