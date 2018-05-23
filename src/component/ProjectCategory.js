@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
 import ProjectList from "./ProjectList";
+import "../styles/accordion.css"
+
 
 class ProjectCategory extends React.Component {
   constructor(props) {
@@ -210,12 +212,12 @@ class ProjectCategory extends React.Component {
         width: this.getWidth(active)
       }
     };
-    let classes = classNames({
+    let classes = {
       category: true,
       isActive: active,
       isLast,
       shiftLeft
-    });
+    };
     return (
       <li className={classes} style={styles.item}>
         <div className="category--content">

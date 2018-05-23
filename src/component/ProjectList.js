@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import "../styles/accordion.css"
 
 class ProjectList extends React.Component {
   createProjectListItem(project) {

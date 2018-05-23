@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
 import ProjectCategory from "./ProjectCategory";
+import "../styles/accordion.css"
+
 
 class Collection extends React.Component {
   constructor(props) {
@@ -116,9 +118,9 @@ class Collection extends React.Component {
 
   render() {
     let catNodes = this.state.categories.map(this.categoryNode);
-    let classes = classNames({
+    let classes ={
       focused: this.state.open
-    });
+    };
     return (
       <div
         className={"categories--menu-container " + classes}
