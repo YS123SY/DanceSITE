@@ -15,6 +15,7 @@ class ProjectList extends React.Component {
     );
   }
   render() {
+    console.log(this.props.projects)
     return (
       <div className="project-list">
         <ul className="menu vertical">
