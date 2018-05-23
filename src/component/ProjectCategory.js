@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
+
 import ProjectList from "./ProjectList";
 
 class ProjectCategory extends React.Component {

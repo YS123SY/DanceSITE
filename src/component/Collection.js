@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
+
 import ProjectCategory from "./ProjectCategory";
 
 class Collection extends React.Component {
@@ -111,6 +113,7 @@ class Collection extends React.Component {
       />
     );
   }
+
   render() {
     let catNodes = this.state.categories.map(this.categoryNode);
     let classes = classNames({

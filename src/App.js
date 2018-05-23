@@ -1,20 +1,16 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
-import Collection from "./component/Collection.js";
+import NavBar from "./component/NavBar";
 
 class App extends Component {
   render() {
     return (
-      <div
-        id="pentitle"
-        style="display: none;"
-        data-title="Expanding Horizontal Accordion in React"
-      >
-        <div id="root" />
+      <Router>
         <div className="App">
-          <Collection />
+          <NavBar />
         </div>
-      </div>
+      </Router>
     );
   }
 }
