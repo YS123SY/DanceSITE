@@ -18,4 +18,19 @@
   padding-top: 10px;
   margin-left: 300px;
   position: sticky;
+  margin-right: 100px;
+}
+.insc-btn {
+  margin-left: 10px;
+}
+.conn-insc-btn {
+  margin-left: 100px;
+  margin-top: 8px;
+}
+.plc-btn {
+  width: 100px;
+  height: 12px;
+}
+.conn-btn {
+  color: white;
 }
