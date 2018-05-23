@@ -1,27 +1,31 @@
-.navbar-main {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  border: 1px solid black;
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 42px;
+html,
+body {
+  background-color: #222;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.logo {
-  border: 1px solid black;
-  width: 40px;
-  height: 40px;
-  background-size: 100% 100%;
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
 }
-.btn-navbar {
-  padding-top: 10px;
-  margin-left: 300px;
-  position: sticky;
-  margin-right: 100px;
+
+a:hover,
+a:hover > * {
+  color: grey;
 }
-.insc-btn {
-  margin-left: 10px;
+
+.categories--menu-container {
+  position: relative;
+  height: 100%;
+  height: calc(100vh - 150px);
+  width: 100%;
 }
 
 ul.categories {
@@ -29,19 +33,20 @@ ul.categories {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  list-style-type: none;
 }
-.conn-insc-btn {
-  margin-left: 100px;
-  margin-top: 8px;
+
+.category {
+  position: relative;
 }
-.plc-btn {
-  width: 100px;
-  height: 12px;
-}
-.conn-btn {
-  color: white;
+
+/*content*/
+
+.category--content {
+  position: absolute;
+  top: 50px;
+  white-space: nowrap;
+  right: 0;
+  transform: translateX(100%);
 }
 
 .category--content h2 {
