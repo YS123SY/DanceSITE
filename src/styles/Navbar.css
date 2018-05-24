@@ -50,6 +50,14 @@
   background-color: #3b8ec2;
   color :white;
   cursor: pointer;
+
+ul.categories {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  list-style-type: none;
 }
 
 .plc-btn {
