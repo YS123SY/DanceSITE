@@ -13,14 +13,16 @@ body {
   border: 1px black solid;
   height: 100%
 }
-.footer-main h1 {
+.rights {
   color: aliceblue;
   text-align: center;
 }
 .copy{
   border: none;
   border-top-style:double ;
-  border-top-color: gray
+  border-top-color: gray;
+  display: flex;
+  justify-content: center;
 }
 .text{
   color:white;

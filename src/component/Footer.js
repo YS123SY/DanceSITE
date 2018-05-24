@@ -26,9 +26,9 @@ class Footer extends React.Component {
             </div>
       </div>
       <div className="copy">
-      <h1>
+      <span className="rights">
           © 2018 Copyright
-        </h1></div>
+        </span></div>
       
       </div>
     );
