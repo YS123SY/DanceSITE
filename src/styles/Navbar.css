@@ -3,9 +3,8 @@
   justify-content: space-around;
   border: 1px solid black;
   background-color: rgba(0, 0, 0, 0.7);
-  height: 70px;
-  width: 100%;
-  margin-top: 20px;
+  width: 1832px;
+  height: 57px;
 }
 .logo-container {
   display: flex;
