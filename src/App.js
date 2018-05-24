@@ -4,6 +4,7 @@ import "./styles/App.css";
 import NavBar from "./component/NavBar";
 import Test from "./component/Test";
 import Footer from "./component/Footer";
+import Inscription from "./component/Inscription";
 
 class App extends Component {
   render() {
@@ -11,7 +12,7 @@ class App extends Component {
       <Router>
         <div className="Body">
           <NavBar />
-          <Test></Test>
+          <Test />
           <Footer />
         </div>
       </Router>
