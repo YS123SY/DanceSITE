@@ -1,10 +1,10 @@
-
 .accordion {
   width: 100%;
   max-width: 1080px;
   height: 350px;
   overflow: hidden;
   margin: 50px auto;
+  margin-top: 180px;
 }
 .accordion ul {
   width: 100%;
@@ -30,7 +30,7 @@
   width: 100%;
   height: 120px;
   display: flex;
-  align-items: flex-end
+  align-items: flex-end;
 }
 .accordion ul li div a {
   display: block;
@@ -61,7 +61,7 @@
   transition: all 400ms ease;
 }
 .accordion ul li div a h2 {
-  font-family: Montserrat,sans-serif;
+  font-family: Montserrat, sans-serif;
   text-overflow: clip;
   font-size: 24px;
   text-transform: uppercase;
@@ -73,37 +73,41 @@
   font-size: 13.5px;
 }
 .accordion ul li:nth-child(1) {
-  background-image: url("https://unsplash.it/1200/1200");
+  background-image: url("https://zlife.zumba.com/wp-content/uploads/thumbs-Rehsbz.png");
 }
 .accordion ul li:nth-child(2) {
-  background-image: url("https://unsplash.it/1200/1201");
+  background-image: url("https://lavidastudio.com/wp-content/uploads/2016/08/11-adults-salsa.jpg");
 }
 .accordion ul li:nth-child(3) {
-  background-image: url("https://unsplash.it/1200/1202");
+  background-image: url("https://img.grouponcdn.com/deal/9j9pozp4yBc5DptfUC66/am-2048x1242/v1/c700x420.jpg");
 }
 .accordion ul li:nth-child(4) {
-  background-image: url("https://unsplash.it/1200/1203");
+  background-image: url("https://cdn.thestage.co.uk/wp-content/uploads/2018/03/05140215/Tango-700x455.jpg");
 }
 .accordion ul li:nth-child(5) {
-  background-image: url("https://unsplash.it/1200/1204");
+  background-image: url("https://i2.wp.com/foyerdesarts.lu/wp-content/uploads/2017/04/danse-orientale-opt.jpg");
 }
 
-.accordion ul:hover li, .accordion ul:focus-within li {
+.accordion ul:hover li,
+.accordion ul:focus-within li {
   width: 8%;
 }
 .accordion ul li:focus {
   outline: none;
 }
 .accordion ul:hover li:hover,
-.accordion ul li:focus, .accordion ul:focus-within li:focus {
+.accordion ul li:focus,
+.accordion ul:focus-within li:focus {
   width: 60%;
 }
 .accordion ul:hover li:hover a,
-.accordion ul li:focus a, .accordion ul:focus-within li:focus a {
+.accordion ul li:focus a,
+.accordion ul:focus-within li:focus a {
   background: rgba(0, 0, 0, 0.4);
 }
 .accordion ul:hover li:hover a *,
-.accordion ul li:focus a *, .accordion ul:focus-within li:focus a * {
+.accordion ul li:focus a *,
+.accordion ul:focus-within li:focus a * {
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0);
