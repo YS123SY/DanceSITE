@@ -7,20 +7,20 @@ const app = express();
 app.use(bodyParser.json());
 
 const mongo_url = "mongodb://localhost:27017";
-const database = "contact";
+const database = "dancers";
 
 MongoClient.connect(mongo_url, (err, client) => {
   assert.equal(null, err, "data-base error");
 
   const db = client.db(database);
 
-  app.post("/contacts", (req, res) => {
-    let new_contact = req.body;
-    db.collection("friends").insertOne({ ...new_contact }, (err, data) => {
+  app.post("/add-dancer", (req, res) => {
+    let new_dancer = req.body;
+    db.collection("dancer").insertOne({ ...new_dancer }, (err, data) => {
       if (err) {
-        res.send("cant add the new conatct");
+        res.send("cant add the new dancer");
       } else {
-        res.send("conatc added ");
+        res.send("dancer added ");
       }
     });
   });

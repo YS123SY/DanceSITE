@@ -95,14 +95,14 @@ class Inscription extends React.Component {
             />
           </div>
 
-          <div className="input-div">
+          <div className="input-div-sexe">
             <span className="span-signIn">Sexe</span>
             <input
               type="radio"
               id="tech"
               name="Sexe"
               value="Femme"
-              className="input"
+              className="input-sexe"
               onChange={this.onChangeSexe}
             />
             Femme
@@ -111,7 +111,7 @@ class Inscription extends React.Component {
               id="tech"
               name="Sexe"
               value="Homme"
-              className="input"
+              className="input-sexe"
               onChange={this.onChangeSexe}
             />
             Homme
