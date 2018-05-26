@@ -5,13 +5,14 @@ import HomePage from "./component/HomePage";
 import Inscription from "./component/Inscription";
 import CardDancer from "./component/CardDancer";
 import Connection from "./component/Connection";
+import SlideVideo from "./component/SlideVideo";
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="Body">
-          <CardDancer />
+          <HomePage />
         </div>
       </Router>
     );
