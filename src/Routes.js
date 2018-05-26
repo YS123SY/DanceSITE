@@ -1,30 +1,19 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
-import Contacts from "./Contacts";
-import AddContact from "./AddContact";
-import ModifyContact from "./ModifyContact";
 import Inscription from "./component/Inscription";
 import Connection from "./component/Connection";
-import HomePgae from "./HomePage";
+import HomePage from "./component/HomePage";
+import CardDancer from "./component/CardDancer";
 
 class Routes extends React.Component {
   render() {
     return (
       <div>
-        <Route exact path="/accueil" component={HomePgae} />
+        <Route exact path="/accueil" component={HomePage} />
         <Route exact path="/inscription" component={Inscription} />
         <Route exact path="/connection" component={Connection} />
-        <Route
-          exact
-          path="/add-dancer"
-          render={props => <AddDancer id={props} />}
-        />
-        <Route
-          exact
-          path="/modify-dancer/:id"
-          render={props => <ModifyDancer id={props} />}
-        />
+        <Route exact path="/dancecard" component={CardDancer} />
       </div>
     );
   }

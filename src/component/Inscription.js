@@ -1,16 +1,31 @@
 import React from "react";
 import axios from "axios";
+import Drop from "./Drop";
+
 import "../styles/Inscription.css";
 
 class Inscription extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
+      pseudo: "",
       age: "",
       sexe: "",
       ville: "",
+      categoryList: [
+        "kizumba",
+        "Salsa",
+        "Oriental",
+        "tango",
+        "Tae Bo",
+        "Street Dance",
+        "bachata",
+        "Danse de salon",
+        "Compétition"
+      ],
+      category: "",
       image: "",
+      annonce: "",
       email: "",
       password: "",
       confirme: ""
@@ -19,12 +34,13 @@ class Inscription extends React.Component {
 
   addUser = user => {
     axios.post("/inscription", { ...user });
+    console.log(user);
   };
 
-  onChangeName = event => {
-    const name = event.target.value;
+  onChangePseudo = event => {
+    const pseudo = event.target.value;
     this.setState({
-      name
+      pseudo
     });
   };
   onChangeAge = event => {
@@ -45,12 +61,14 @@ class Inscription extends React.Component {
       ville
     });
   };
-  onChangeImage = event => {
-    const image = event.target.value;
+
+  onChangeAnnonce = event => {
+    const annonce = event.target.value;
     this.setState({
-      image
+      annonce
     });
   };
+
   onChangeEmail = event => {
     const email = event.target.value;
     this.setState({
@@ -69,18 +87,32 @@ class Inscription extends React.Component {
       confirme
     });
   };
+  onDrop = accepted => {
+    const files = accepted;
+    if (files && files.length > 0) {
+      const file = files[0];
+      this.filename = file.name;
+      const reader = new FileReader();
+      reader.onload = event => {
+        this.setState({
+          image: event.target.result
+        });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
   render() {
     return (
       <div className="sign-main">
         <div className="sign-div">
           <div className="input-div">
-            <span className="span-signIn">Name</span>
+            <span className="span-signIn">Mon Pseudo</span>
             <input
               type="holderspace"
-              value={this.state.name}
+              value={this.state.pseudo}
               className="input"
-              placeholder="Name"
-              onChange={this.onChangeName}
+              placeholder="Mon pseudo"
+              onChange={this.onChangePseudo}
             />
           </div>
 
@@ -118,6 +150,16 @@ class Inscription extends React.Component {
           </div>
 
           <div className="input-div">
+            <span className="span-signIn">Category</span>
+            {this.state.categoryList.map((el, i) => (
+              <div className="input-div-category">
+                <input type="checkbox" onChange={this.handleCheck} />
+                <p> {el}:</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="input-div">
             <span className="span-signIn">Ville</span>
             <input
               type="holderspace"
@@ -129,14 +171,20 @@ class Inscription extends React.Component {
           </div>
 
           <div className="input-div">
-            <span className="span-signIn">Image</span>
+            <span className="span-signIn">Mon Annonce</span>
             <input
               type="holderspace"
-              value={this.state.image}
+              value={this.state.annonce}
               className="input"
-              placeholder="Image Link"
-              onChange={this.onChangeImage}
+              placeholder="Mon Annonce"
+              onChange={this.onChangeAnnonce}
             />
+          </div>
+          <div className="input-div">
+            <div>
+              <span className="span-signIn">Image</span>
+            </div>
+            <Drop file={this.state.image} onDrop={this.onDrop} />
           </div>
 
           <div className="input-div">

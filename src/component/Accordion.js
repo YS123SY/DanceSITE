@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import "../styles/test.css";
+import "../styles/Accordion.css";
 
-class Test extends Component {
+class Accordion extends Component {
   render() {
     return (
       <div className="accordion">
@@ -53,4 +53,4 @@ class Test extends Component {
   }
 }
 
-export default Test;
+export default Accordion;

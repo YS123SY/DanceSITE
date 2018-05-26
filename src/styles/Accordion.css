@@ -73,19 +73,24 @@
   font-size: 13.5px;
 }
 .accordion ul li:nth-child(1) {
-  background-image: url("https://zlife.zumba.com/wp-content/uploads/thumbs-Rehsbz.jpg");
+  background-image: url("https://i.ytimg.com/vi/5gYNVGS1ac4/maxresdefault.jpg");
+  background-size: 100% 100%;
 }
 .accordion ul li:nth-child(2) {
   background-image: url("https://lavidastudio.com/wp-content/uploads/2016/08/11-adults-salsa.jpg");
+  background-size: 100% 100%;
 }
 .accordion ul li:nth-child(3) {
-  background-image: url("https://img.grouponcdn.com/deal/9j9pozp4yBc5DptfUC66/am-2048x1242/v1/c700x420.jpg");
+  background-image: url("http://www.lya-pro.fr/wp-content/uploads/2015/07/DSC_0741.jpg");
+  background-size: 100% 100%;
 }
 .accordion ul li:nth-child(4) {
   background-image: url("https://cdn.thestage.co.uk/wp-content/uploads/2018/03/05140215/Tango-700x455.jpg");
+  background-size: 100% 100%;
 }
 .accordion ul li:nth-child(5) {
   background-image: url("https://i2.wp.com/foyerdesarts.lu/wp-content/uploads/2017/04/danse-orientale-opt.jpg");
+  background-size: 100% 100%;
 }
 
 .accordion ul:hover li,

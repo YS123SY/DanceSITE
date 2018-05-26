@@ -6,13 +6,18 @@ import Inscription from "./component/Inscription";
 import CardDancer from "./component/CardDancer";
 import Connection from "./component/Connection";
 import SlideVideo from "./component/SlideVideo";
+import Routes from "./Routes";
+import Footer from "./component/Footer";
+import NavBar from "./component/NavBar";
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="Body">
-          <HomePage />
+          <NavBar />
+          <Routes />
+          <Footer />
         </div>
       </Router>
     );

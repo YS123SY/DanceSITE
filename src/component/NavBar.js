@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import mdbreact from "mdbreact";
 import {
   Navbar,
   Nav,
@@ -74,13 +75,27 @@ class Allo extends React.Component {
 
           <Nav pullRight>
             <NavItem eventKey={1}>
-              <Link to="/connection">
-                <Button bsStyle="primary">Connection</Button>
-              </Link>
+              <img
+                style={{
+                  backgroundImage: `url(
+              "https://mdbootstrap.com/img/Photos/Others/pricing-table7.jpg"
+            )`,
+                  border: " 6px raduis"
+                }}
+              />
             </NavItem>
             <NavItem eventKey={2}>
+              <Link to="/connection">
+                <Button rounded gradient="blue">
+                  Connection
+                </Button>
+              </Link>
+            </NavItem>
+            <NavItem eventKey={3}>
               <Link to="/inscription">
-                <Button bsStyle="primary">Inscription</Button>
+                <Button rounded gradient="blue">
+                  Inscription
+                </Button>
               </Link>
             </NavItem>
           </Nav>
