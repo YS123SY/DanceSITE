@@ -73,15 +73,15 @@
   font-size: 13.5px;
 }
 .accordion ul li:nth-child(1) {
-  background-image: url("https://i.ytimg.com/vi/5gYNVGS1ac4/maxresdefault.jpg");
+  background-image: url("http://www.lya-pro.fr/wp-content/uploads/2015/07/DSC_0741.jpg");
   background-size: 100% 100%;
 }
 .accordion ul li:nth-child(2) {
-  background-image: url("http://musicandote.com/wp-content/uploads/2014/02/bachata.jpeg");
+  background-image: url("https://i.ytimg.com/vi/5gYNVGS1ac4/maxresdefault.jpg");
   background-size: 100% 100%;
 }
 .accordion ul li:nth-child(3) {
-  background-image: url("http://www.lya-pro.fr/wp-content/uploads/2015/07/DSC_0741.jpg");
+  background-image: url(" https://cibul.s3.amazonaws.com/event_tres-gros-calin-bachata-et-salsa-debout_646905.jpg");
   background-size: 100% 100%;
 }
 .accordion ul li:nth-child(4) {

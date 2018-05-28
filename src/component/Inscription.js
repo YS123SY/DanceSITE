@@ -4,6 +4,19 @@ import Drop from "./Drop";
 
 import "../styles/Inscription.css";
 
+const categoryList = [
+  "lila wil mezwed 5adem",
+  "kizumba",
+  "Salsa",
+  "Oriental",
+  "tango",
+  "Tae Bo",
+  "Street Dance",
+  "bachata",
+  "Danse de salon",
+  "Compétition"
+];
+
 class Inscription extends React.Component {
   constructor(props) {
     super(props);
@@ -12,18 +25,7 @@ class Inscription extends React.Component {
       age: "",
       sexe: "",
       ville: "",
-      categoryList: [
-        "kizumba",
-        "Salsa",
-        "Oriental",
-        "tango",
-        "Tae Bo",
-        "Street Dance",
-        "bachata",
-        "Danse de salon",
-        "Compétition"
-      ],
-      category: "",
+      category: [],
       image: "",
       annonce: "",
       email: "",
@@ -33,8 +35,7 @@ class Inscription extends React.Component {
   }
 
   addUser = user => {
-    axios.post("/inscription", { ...user });
-    console.log(user);
+    axios.post("/add_users", { ...user });
   };
 
   onChangePseudo = event => {
@@ -60,6 +61,20 @@ class Inscription extends React.Component {
     this.setState({
       ville
     });
+  };
+
+  onChangeCategory = event => {
+    const category = event.target.value;
+
+    if (this.state.category.indexOf(category) < 0) {
+      return this.setState({
+        category: this.state.category.concat(category)
+      });
+    } else {
+      this.setState({
+        category: this.state.category.filter(el => el !== category)
+      });
+    }
   };
 
   onChangeAnnonce = event => {
@@ -101,6 +116,7 @@ class Inscription extends React.Component {
       reader.readAsDataURL(file);
     }
   };
+
   render() {
     return (
       <div className="sign-main">
@@ -150,13 +166,19 @@ class Inscription extends React.Component {
           </div>
 
           <div className="input-div">
-            <span className="span-signIn">Category</span>
-            {this.state.categoryList.map((el, i) => (
-              <div className="input-div-category">
-                <input type="checkbox" onChange={this.handleCheck} />
-                <p> {el}:</p>
-              </div>
-            ))}
+            <div className="category-div">
+              <span className="span-signIn">Category</span>
+              {categoryList.map((el, i) => (
+                <div className="input-div-category">
+                  <input
+                    type="checkbox"
+                    onChange={this.onChangeCategory}
+                    value={el}
+                  />
+                  <p> {el}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="input-div">

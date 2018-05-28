@@ -37,9 +37,7 @@
 }
 .input-div-category {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 70%;
+  width: 10%;
   margin: 10px;
   padding: 5px;
 }
@@ -100,4 +98,12 @@
   border: 2px dashed black;
   align-items: center;
   width: 55%;
+}
+.radio-btn {
+  display: flex;
+  flex-direction: row;
+}
+.category-div {
+  display: flex;
+  flex-wrap: wrap;
 }

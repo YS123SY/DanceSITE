@@ -3,12 +3,10 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./styles/App.css";
 import HomePage from "./component/HomePage";
 import Inscription from "./component/Inscription";
-import CardDancer from "./component/CardDancer";
 import Connection from "./component/Connection";
-import SlideVideo from "./component/SlideVideo";
-import Routes from "./Routes";
-import Footer from "./component/Footer";
+import FooterPage from "./component/FooterPage";
 import NavBar from "./component/NavBar";
+import Rootes from "./Routes";
 
 class App extends Component {
   render() {
@@ -16,8 +14,8 @@ class App extends Component {
       <Router>
         <div className="Body">
           <NavBar />
-          <Routes />
-          <Footer />
+          <Rootes />
+          <FooterPage />
         </div>
       </Router>
     );

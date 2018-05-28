@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import mdbreact from "mdbreact";
 import {
   Navbar,
   Nav,
@@ -86,16 +85,12 @@ class Allo extends React.Component {
             </NavItem>
             <NavItem eventKey={2}>
               <Link to="/connection">
-                <Button rounded gradient="blue">
-                  Connection
-                </Button>
+                <Button bsStyle="info">Connection</Button>
               </Link>
             </NavItem>
             <NavItem eventKey={3}>
               <Link to="/inscription">
-                <Button rounded gradient="blue">
-                  Inscription
-                </Button>
+                <Button bsStyle="info">Inscription</Button>
               </Link>
             </NavItem>
           </Nav>
