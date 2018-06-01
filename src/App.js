@@ -14,7 +14,9 @@ class App extends Component {
       <Router>
         <div className="Body">
           <NavBar />
-          <Rootes />
+          <div className="routes">
+            <Rootes />
+          </div>
           <FooterPage />
         </div>
       </Router>

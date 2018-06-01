@@ -5,7 +5,7 @@ import Drop from "./Drop";
 import "../styles/Inscription.css";
 
 const categoryList = [
-  "lila wil mezwed 5adem",
+  "Soirée",
   "kizumba",
   "Salsa",
   "Oriental",
@@ -34,32 +34,13 @@ class Inscription extends React.Component {
     };
   }
 
-  addUser = user => {
-    axios.post("/add_users", { ...user });
+  addUser = () => {
+    axios.post("/add_users", { ...this.state }).catch(e => console.log(e));
   };
 
-  onChangePseudo = event => {
-    const pseudo = event.target.value;
+  onChange = e => {
     this.setState({
-      pseudo
-    });
-  };
-  onChangeAge = event => {
-    const age = event.target.value;
-    this.setState({
-      age
-    });
-  };
-  onChangeSexe = event => {
-    const sexe = event.target.value;
-    this.setState({
-      sexe
-    });
-  };
-  onChangeVille = event => {
-    const ville = event.target.value;
-    this.setState({
-      ville
+      [e.target.name]: e.target.value
     });
   };
 
@@ -77,31 +58,6 @@ class Inscription extends React.Component {
     }
   };
 
-  onChangeAnnonce = event => {
-    const annonce = event.target.value;
-    this.setState({
-      annonce
-    });
-  };
-
-  onChangeEmail = event => {
-    const email = event.target.value;
-    this.setState({
-      email
-    });
-  };
-  onChangePassword = event => {
-    const password = event.target.value;
-    this.setState({
-      password
-    });
-  };
-  onChangeConfirmPassword = event => {
-    const confirme = event.target.value;
-    this.setState({
-      confirme
-    });
-  };
   onDrop = accepted => {
     const files = accepted;
     if (files && files.length > 0) {
@@ -128,7 +84,8 @@ class Inscription extends React.Component {
               value={this.state.pseudo}
               className="input"
               placeholder="Mon pseudo"
-              onChange={this.onChangePseudo}
+              onChange={this.onChange}
+              name="pseudo"
             />
           </div>
 
@@ -139,7 +96,8 @@ class Inscription extends React.Component {
               value={this.state.age}
               className="input"
               placeholder="Age"
-              onChange={this.onChangeAge}
+              onChange={this.onChange}
+              name="age"
             />
           </div>
 
@@ -148,10 +106,10 @@ class Inscription extends React.Component {
             <input
               type="radio"
               id="tech"
-              name="Sexe"
+              name="sexe"
               value="Femme"
               className="input-sexe"
-              onChange={this.onChangeSexe}
+              onChange={this.onChange}
             />
             Femme
             <input
@@ -160,7 +118,7 @@ class Inscription extends React.Component {
               name="Sexe"
               value="Homme"
               className="input-sexe"
-              onChange={this.onChangeSexe}
+              onChange={this.onChange}
             />
             Homme
           </div>
@@ -188,7 +146,8 @@ class Inscription extends React.Component {
               value={this.state.ville}
               className="input"
               placeholder="Ville"
-              onChange={this.onChangeVille}
+              onChange={this.onChange}
+              name="ville"
             />
           </div>
 
@@ -199,7 +158,8 @@ class Inscription extends React.Component {
               value={this.state.annonce}
               className="input"
               placeholder="Mon Annonce"
-              onChange={this.onChangeAnnonce}
+              onChange={this.onChange}
+              name="annonce"
             />
           </div>
           <div className="input-div">
@@ -216,7 +176,8 @@ class Inscription extends React.Component {
               value={this.state.email}
               className="input"
               placeholder="email"
-              onChange={this.onChangeEmail}
+              onChange={this.onChange}
+              name="email"
             />
           </div>
 
@@ -227,7 +188,8 @@ class Inscription extends React.Component {
               value={this.state.password}
               className="input"
               placeholder="password"
-              onChange={this.onChangePassword}
+              onChange={this.onChange}
+              name="password"
             />
           </div>
           <div className="input-div">
@@ -237,15 +199,13 @@ class Inscription extends React.Component {
               value={this.state.confirme}
               className="input"
               placeholder="confirme password"
-              onChange={this.onChangeConfirmPassword}
+              onChange={this.onChange}
+              name="confirme"
             />
           </div>
 
           <div className="submit-div">
-            <button
-              className="btn-create"
-              onClick={() => this.addUser(this.state)}
-            >
+            <button className="btn-create" onClick={() => this.addUser()}>
               Submit
             </button>
           </div>

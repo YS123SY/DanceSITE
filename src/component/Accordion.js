@@ -10,24 +10,24 @@ class Accordion extends Component {
           <li tabindex="1">
             <div>
               <a href="#">
-                <h2>TAE BO</h2>
-                <p>Looking for your Tae Bo partner or team</p>
+                <h2>ZUMBA</h2>
+                <p>Looking for your Zumba partner or team</p>
               </a>
             </div>
           </li>
           <li tabindex="2">
             <div>
               <a href="#">
-                <h2>BACHATA</h2>
-                <p>Looking for your Bachata partner or team</p>
+                <h2>TAE BO</h2>
+                <p>Looking for your Tae Bo partner or team</p>
               </a>
             </div>
           </li>
           <li tabindex="3">
             <div>
               <a href="#">
-                <h2>ZUMBA</h2>
-                <p>Looking for your Zumba partner or team</p>
+                <h2>BACHATA</h2>
+                <p>Looking for your Bachata partner or team</p>
               </a>
             </div>
           </li>

@@ -26,12 +26,10 @@ class Connection extends React.Component {
   };
 
   inscription = () => {
-    axios
-      .get(`/dancer/${this.state.email}/${this.state.password}`)
-      .then(res => {
-        if (res.data === "") alert("cant find user");
-        else alert("dancer connected");
-      });
+    axios.get(`/user/${this.state.email}/${this.state.password}`).then(res => {
+      if (res.data === "") alert("cant find user");
+      else alert("dancer connected");
+    });
   };
 
   render() {

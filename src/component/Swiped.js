@@ -1,17 +1,17 @@
 import React from "react";
 import Swiper from "react-id-swiper";
 import axios from "axios";
+import { Button } from "react-bootstrap";
+import Coverflow from "react-coverflow";
 
 import CardDancer from "./CardDancer";
 
 export default class Swiped extends React.Component {
   constructor(props) {
     super(props);
-    this.goNext = this.goNext.bind(this);
-    this.goPrev = this.goPrev.bind(this);
-    this.swiper = null;
     this.state = {
-      dancers: []
+      dancers: [],
+      active: 0
     };
   }
 
@@ -24,33 +24,35 @@ export default class Swiped extends React.Component {
     });
   };
 
-  goNext() {
-    if (this.swiper) this.swiper.slideNext();
-  }
-
-  goPrev() {
-    if (this.swiper) this.swiper.slidePrev();
-  }
+  fn = () => {
+    console.log("hey hey hey");
+    return 5;
+  };
 
   render() {
-    console.log(this.state.dancers);
-    const params = {
-      pagination: {
-        el: ".swiper-pagination",
-        type: "bullets",
-        clickable: true
-      }
-    };
-
     return (
-      <Swiper
-        {...params}
-        ref={node => {
-          if (node) this.swiper = node.swiper;
-        }}
-      >
-        {this.state.dancers.map((el, i) => <CardDancer user={el} key={i} />)}
-      </Swiper>
+      <div>
+        <Coverflow
+          width="960"
+          height="500"
+          displayQuantityOfSide={2}
+          navigation={true}
+          enableScroll={true}
+          clickable={true}
+          active={this.state.active}
+        >
+          {this.state.dancers.map((el, i) => {
+            console.log("============> ", el);
+            return (
+              <img
+                src={el.image}
+                alt={el.pseudo}
+                data-action={`dancer/${el._id}`}
+              />
+            );
+          })}
+        </Coverflow>
+      </div>
     );
   }
 }

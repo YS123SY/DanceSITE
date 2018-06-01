@@ -5,6 +5,8 @@ const { mongoose } = require("./Connection/connection");
 const { User } = require("./mongoose/model/User");
 
 const app = express();
+app.use(express.json({ limit: "50mb" }));
+app.use(express.urlencoded({ limit: "50mb" }));
 app.use(bodyParser.json());
 
 app.post("/add_users", (req, res) => {
@@ -23,8 +25,8 @@ app.get("/users", (req, res) => {
   });
 });
 
-app.get("/users/:id", (req, res) => {
-  User.find((err, data) => {
+app.get("/dancer/:id", (req, res) => {
+  User.findOne({ _id: req.params.id }, (err, data) => {
     if (err) res.status(401).send(err);
     res.send(data);
   });
