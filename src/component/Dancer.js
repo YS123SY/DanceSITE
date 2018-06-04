@@ -12,8 +12,7 @@ class Dancer extends React.Component {
       dancer: {},
       update: false,
       isNull: true,
-      changepic: false,
-      logo: ""
+      image: ""
     };
   }
   componentDidMount = () => {
@@ -103,6 +102,20 @@ class Dancer extends React.Component {
     });
   };
 
+  onDrop = accepted => {
+    const files = accepted;
+    if (files && files.length > 0) {
+      const file = files[0];
+      this.filename = file.name;
+      const reader = new FileReader();
+      reader.onload = event => {
+        this.setState({
+          image: event.target.result
+        });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
   render() {
     const { update, isNull } = this.state;
     return (
@@ -110,10 +123,11 @@ class Dancer extends React.Component {
         <div className="row">
           <div className="info">
             <div className="div-image">
-              <img className="image-user" src={this.state.image} />
-              <span className="modify-pic" onClick={this.updatepic}>
-                Another Pic
-              </span>
+              {update ? (
+                <Drop onDrop={this.onDrop} file={this.state.image} />
+              ) : (
+                <img className="image-user" src={this.state.image} />
+              )}
               <div className="rating-container">
                 <Rating />
               </div>

@@ -41,18 +41,20 @@ app.get("/dancers", (req, res) => {
 
 app.put("/dancer/:id", (req, res) => {
   let id = req.params.id;
-  let newName = req.body.name;
+  let newPseudo = req.body.pseudo;
   let newAge = req.body.age;
   let newSexe = req.body.sexe;
   let newVille = req.body.ville;
+  let newImage = req.body.image;
   let newCategory = req.body.category;
   let newAnnonce = req.body.annonce;
   User.updateOne(
     { _id: id },
     {
-      name: newName,
+      pseudo: newPseudo,
       age: newAge,
       sexe: newSexe,
+      image: newImage,
       ville: newVille,
       category: newCategory,
       annonce: newAnnonce
