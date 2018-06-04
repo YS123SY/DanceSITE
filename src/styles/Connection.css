@@ -50,9 +50,10 @@
   justify-content: flex-start;
 }
 .lobtn-create {
-  background-color: gray;
-  color: black;
-  border: solid 1px rgb(59, 59, 59);
+  color: #fff;
+  background-color: #064e82;
+  border-color: #46b8da;
+
   padding: 5px 20px;
 
   margin-bottom: 50px;

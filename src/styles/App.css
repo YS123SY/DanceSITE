@@ -20,3 +20,8 @@
   color: aliceblue;
   margin-top: 200px;
 }
+.btn-info {
+  color: #fff;
+  background-color: #064e82;
+  border-color: #46b8da;
+}

@@ -123,18 +123,10 @@ class Dancer extends React.Component {
         <div className="row">
           <div className="info">
             <div className="div-image">
-              <img />
-              {update ? (
-                <div
-                  className="image-user"
-                  value={this.state.image}
-                  onChange={this.onChangeImage}
-                >
-                  <Drop file={this.state.image} onDrop={this.onDrop} />
-                </div>
-              ) : (
-                this.state.image
-              )}
+              <img className="image-user" src={this.state.image} />
+
+              <Drop file={this.state.image} onDrop={this.onDrop} />
+
               <div className="rating-container">
                 <Rating />
               </div>
@@ -214,7 +206,8 @@ class Dancer extends React.Component {
                       sexe: this.state.sexe,
                       ville: this.state.ville,
                       category: this.state.category,
-                      annonce: this.state.annonce
+                      annonce: this.state.annonce,
+                      image: this.state.image
                     })
                   }
                 >

@@ -45,7 +45,7 @@ export default class Swiped extends React.Component {
               <img
                 src={el.image}
                 alt={el.pseudo}
-                data-action={`dancer/${el._id}`}
+                data-action={`/dancer/${el._id}`}
               />
             );
           })}

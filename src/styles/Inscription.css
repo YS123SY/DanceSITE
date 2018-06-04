@@ -72,9 +72,9 @@
   justify-content: flex-start;
 }
 .btn-create {
-  background-color: gray;
-  color: black;
-  border: solid 1px rgb(59, 59, 59);
+  color: #fff;
+  background-color: #064e82;
+  border-color: #46b8da;
   padding-top: 10px;
   margin-bottom: 50px;
   padding-bottom: 10px;

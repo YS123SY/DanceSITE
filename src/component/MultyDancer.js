@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Grid, Row, Thumbnail, Button, Col } from "react-bootstrap";
 import "../styles/CardDancer.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 class MultyDancer extends React.Component {
   constructor(props) {
@@ -28,7 +29,9 @@ class MultyDancer extends React.Component {
                   {el.pseudo} {el.age}
                 </h3>
                 <p>{el.category}</p>
-                <Button bsStyle="primary">Let Dance</Button>&nbsp;
+                <Link to={`/dancer/${el._id}`}>
+                  <Button bsStyle="primary">Let Dance</Button>
+                </Link>
               </Thumbnail>
             </Col>
           );

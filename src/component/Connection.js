@@ -62,11 +62,15 @@ class Connection extends React.Component {
             <input
               className="lobtn-create"
               type="button"
-              value="Submit"
+              value="Welcome"
               onClick={this.inscription}
             />
             <Link to="/inscription">
-              <span className="locreate">Inscription</span>
+              <input
+                className="lobtn-create"
+                type="button"
+                value="Be One Of Us"
+              />
             </Link>
           </div>
         </div>
