@@ -4,7 +4,6 @@ import "../styles/Dancer.css";
 import { Link } from "react-router-dom";
 import Rating from "./Rating";
 import Drop from "./Drop";
-import Modal from "./Modal";
 
 class Dancer extends React.Component {
   constructor(props) {
@@ -221,7 +220,6 @@ class Dancer extends React.Component {
             )}
           </div>
         </div>
-        {this.state.changepic && <Modal file={this.state.logo} />}
       </div>
     );
   }
