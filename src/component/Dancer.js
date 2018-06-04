@@ -13,7 +13,8 @@ class Dancer extends React.Component {
       dancer: {},
       update: false,
       isNull: true,
-      changepic: false
+      changepic: false,
+      logo: ""
     };
   }
   componentDidMount = () => {
@@ -220,7 +221,7 @@ class Dancer extends React.Component {
             )}
           </div>
         </div>
-        {this.state.changepic && <Modal />}
+        {this.state.changepic && <Modal file={this.state.logo} />}
       </div>
     );
   }

@@ -9,4 +9,16 @@
   right: 0;
   top: 0;
   bottom: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.fileDrag {
+  background: rgba(144, 116, 116, 0.4);
+}
+.modify-pic {
+  display: flex;
+  justify-content: flex-end;
+  color: aqua;
+  font-size: large;
 }
