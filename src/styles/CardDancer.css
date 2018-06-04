@@ -72,3 +72,19 @@ Thumbnail {
   -ms-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
 }
+.dancer-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card {
+  width: 500px;
+  height: 300px;
+  border: solid 2px gray;
+  margin: 50px;
+  background-color: white;
+}
+.img {
+  width: 50%;
+  height: 50%;
+}

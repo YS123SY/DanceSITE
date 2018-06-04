@@ -4,8 +4,6 @@ import axios from "axios";
 import { Button } from "react-bootstrap";
 import Coverflow from "react-coverflow";
 
-import CardDancer from "./CardDancer";
-
 export default class Swiped extends React.Component {
   constructor(props) {
     super(props);

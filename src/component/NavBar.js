@@ -31,31 +31,15 @@ class Allo extends React.Component {
         <Navbar.Collapse>
           <Nav>
             <NavItem eventKey={1}>
-              <ButtonToolbar>
-                <Dropdown id="dropdown-custom-2">
-                  <Button bsStyle="info">Dancer</Button>
-                  <Dropdown.Toggle bsStyle="success" />
-                  <Dropdown.Menu className="super-colors">
-                    <MenuItem eventKey="1">Homme</MenuItem>
-                    <MenuItem eventKey="2">Femme</MenuItem>
-                    <MenuItem eventKey="3">Groupe</MenuItem>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </ButtonToolbar>
+              <Link to="/">
+                <Button bsStyle="info">Accueil</Button>
+              </Link>
             </NavItem>
 
             <NavItem eventKey={2}>
-              <ButtonToolbar>
-                <Dropdown id="dropdown-custom-2">
-                  <Button bsStyle="info">Age</Button>
-                  <Dropdown.Toggle bsStyle="success" />
-                  <Dropdown.Menu className="super-colors">
-                    <MenuItem eventKey="1">20</MenuItem>
-                    <MenuItem eventKey="2">30</MenuItem>
-                    <MenuItem eventKey="3">And So on </MenuItem>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </ButtonToolbar>
+              <Link to="/Dancers">
+                <Button bsStyle="info">Dancers</Button>
+              </Link>
             </NavItem>
 
             <NavItem eventKey={3}>
@@ -73,16 +57,6 @@ class Allo extends React.Component {
           </Nav>
 
           <Nav pullRight>
-            <NavItem eventKey={1}>
-              <img
-                style={{
-                  backgroundImage: `url(
-              "https://mdbootstrap.com/img/Photos/Others/pricing-table7.jpg"
-            )`,
-                  border: " 6px raduis"
-                }}
-              />
-            </NavItem>
             <NavItem eventKey={2}>
               <Link to="/connection">
                 <Button bsStyle="info">Connection</Button>

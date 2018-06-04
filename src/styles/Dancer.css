@@ -1,23 +1,23 @@
 .column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .row {
   display: flex;
-  margin-top: 100px;
-  margin-bottom: 100px;
+}
+.info {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.div-image {
 }
 
 .image-user {
   width: 250px;
   height: 250px;
-  margin-right: 100px;
   border-radius: 5px;
   border: 2px solid black;
-  border-radius: 50%;
 }
 .div-para {
   display: flex;
@@ -33,20 +33,46 @@
   border-left-width: 0px;
   border-right-width: 0px;
   margin-top: 10px;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 .div-annonce {
   text-align: center;
-  border: 2px double #195877;
-  width: fit-content;
-  margin-bottom: 20px;
+  border: 2px double #a8d7ef;
+  width: 50%;
+  margin-right: 50px;
 }
 .annonce-user {
   padding-top: 20px;
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
-  color: snow;
-  font-size: xx-large;
+  color: aqua;
+  font-size: x-large;
 }
 .span {
+  color: skyblue;
+}
+.checked {
+  color: skyblue;
+}
+
+.the-star {
+  width: 25px;
+}
+
+.rating-container {
+  margin: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.input {
+  color: black;
+}
+.textarea {
+  width: 60%;
+  height: 60%;
+  align-self: center;
 }

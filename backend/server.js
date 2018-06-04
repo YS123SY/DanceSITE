@@ -32,6 +32,38 @@ app.get("/dancer/:id", (req, res) => {
   });
 });
 
+app.get("/dancers", (req, res) => {
+  User.find((err, data) => {
+    if (err) res.status(401).send(err);
+    res.send(data);
+  });
+});
+
+app.put("/dancer/:id", (req, res) => {
+  let id = req.params.id;
+  let newName = req.body.name;
+  let newAge = req.body.age;
+  let newSexe = req.body.sexe;
+  let newVille = req.body.ville;
+  let newCategory = req.body.category;
+  let newAnnonce = req.body.annonce;
+  User.updateOne(
+    { _id: id },
+    {
+      name: newName,
+      age: newAge,
+      sexe: newSexe,
+      ville: newVille,
+      category: newCategory,
+      annonce: newAnnonce
+    },
+    (err, data) => {
+      if (err) res.status(400).send(err);
+      else res.send(data);
+    }
+  );
+});
+
 app.listen(3001, err => {
   if (err) console.log("server erreur");
   else console.log("server is runing on port 3001");
