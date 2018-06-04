@@ -4,6 +4,7 @@ import "../styles/Dancer.css";
 import { Link } from "react-router-dom";
 import Rating from "./Rating";
 import Drop from "./Drop";
+import Modal from "./Modal";
 
 class Dancer extends React.Component {
   constructor(props) {
@@ -11,7 +12,8 @@ class Dancer extends React.Component {
     this.state = {
       dancer: {},
       update: false,
-      isNull: true
+      isNull: true,
+      changepic: false
     };
   }
   componentDidMount = () => {
@@ -60,13 +62,6 @@ class Dancer extends React.Component {
     });
   };
 
-  onChangeImage = event => {
-    const image = event.target.value;
-    this.setState({
-      image
-    });
-  };
-
   onChangeAge = event => {
     const age = event.target.value;
     this.setState({
@@ -101,19 +96,11 @@ class Dancer extends React.Component {
       category: array
     });
   };
-  onDrop = accepted => {
-    const files = accepted;
-    if (files && files.length > 0) {
-      const file = files[0];
-      this.filename = file.name;
-      const reader = new FileReader();
-      reader.onload = event => {
-        this.setState({
-          image: event.target.result
-        });
-      };
-      reader.readAsDataURL(file);
-    }
+
+  updatepic = () => {
+    this.setState({
+      changepic: !this.state.changepic
+    });
   };
 
   render() {
@@ -124,9 +111,9 @@ class Dancer extends React.Component {
           <div className="info">
             <div className="div-image">
               <img className="image-user" src={this.state.image} />
-
-              <Drop file={this.state.image} onDrop={this.onDrop} />
-
+              <span className="modify-pic" onClick={this.updatepic}>
+                Another Pic
+              </span>
               <div className="rating-container">
                 <Rating />
               </div>
@@ -233,6 +220,7 @@ class Dancer extends React.Component {
             )}
           </div>
         </div>
+        {this.state.changepic && <Modal />}
       </div>
     );
   }
