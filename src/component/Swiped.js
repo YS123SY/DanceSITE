@@ -3,6 +3,7 @@ import Swiper from "react-id-swiper";
 import axios from "axios";
 import { Button } from "react-bootstrap";
 import Coverflow from "react-coverflow";
+import "../styles/Swiped.css";
 
 export default class Swiped extends React.Component {
   constructor(props) {
@@ -31,7 +32,7 @@ export default class Swiped extends React.Component {
     return (
       <div>
         <Coverflow
-          width="960"
+          width="1460"
           height="500"
           displayQuantityOfSide={2}
           navigation={true}

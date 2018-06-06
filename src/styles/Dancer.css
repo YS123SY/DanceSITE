@@ -3,6 +3,7 @@
 
 .row {
   display: flex;
+  margin-top: 50px;
 }
 .info {
   width: 50%;
@@ -39,17 +40,21 @@
 }
 .div-annonce {
   text-align: center;
-  border: 2px double #a8d7ef;
+  border: 2px solid black;
   width: 50%;
   margin-right: 50px;
+  background-color: aliceblue;
 }
 .annonce-user {
   padding-top: 20px;
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
-  color: aqua;
+  color: black;
   font-size: x-large;
+  overflow-wrap: break-word;
+  font-family: "Times New Roman", Times, serif;
+  text-align: justify;
 }
 .span {
   color: skyblue;

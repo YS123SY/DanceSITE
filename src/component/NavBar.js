@@ -43,16 +43,9 @@ class Allo extends React.Component {
             </NavItem>
 
             <NavItem eventKey={3}>
-              <ButtonToolbar>
-                <Dropdown id="dropdown-custom-2">
-                  <Button bsStyle="info">Place</Button>
-                  <Dropdown.Toggle bsStyle="success" />
-                  <Dropdown.Menu className="super-colors">
-                    <MenuItem eventKey="1">Nord Tunisie</MenuItem>
-                    <MenuItem eventKey="2">Sud Tunisie</MenuItem>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </ButtonToolbar>
+              <Link to="/annonces">
+                <Button bsStyle="info">Annonces</Button>
+              </Link>
             </NavItem>
           </Nav>
 

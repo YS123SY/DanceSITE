@@ -4,6 +4,7 @@ import "../styles/App.css";
 import Accordion from "./Accordion";
 import Swiped from "./Swiped";
 import MultyDancer from "./MultyDancer";
+import SearchBar from "./SearchBar";
 
 class HomePage extends Component {
   render() {
@@ -11,6 +12,7 @@ class HomePage extends Component {
       <div className="Body">
         <Accordion />
         <Swiped />
+        <SearchBar />
       </div>
     );
   }

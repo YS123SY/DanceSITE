@@ -23,16 +23,15 @@ class MultyDancer extends React.Component {
       <div className="dancer-card">
         {this.state.dancers.map((el, i) => {
           return (
-            <Col xs={6} md={4}>
-              <Thumbnail src={el.image} alt="242x200">
-                <h3>
-                  {el.pseudo} {el.age}
-                </h3>
-                <p>{el.category}</p>
-                <Link to={`/dancer/${el._id}`}>
-                  <Button bsStyle="primary">Let Dance</Button>
-                </Link>
-              </Thumbnail>
+            <Col xs={4} md={3} className="card">
+              <img src={el.image} className="id-image" alt="242x200" />
+              <h3 className="h3">
+                {el.pseudo} {el.age}
+              </h3>
+              <p className="parag">{el.category}</p>
+              <Link to={`/dancer/${el._id}`}>
+                <Button bsStyle="primary">Let Dance</Button>
+              </Link>
             </Col>
           );
         })}

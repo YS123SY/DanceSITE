@@ -6,7 +6,7 @@ import "../styles/Inscription.css";
 
 const categoryList = [
   "Soirée",
-  "kizumba",
+  "Zumba",
   "Salsa",
   "Oriental",
   "tango",
@@ -35,7 +35,7 @@ class Inscription extends React.Component {
   }
 
   addUser = () => {
-    axios.post("/add_users", { ...this.state }).catch(e => console.log(e));
+    axios.post("/add_users", { ...this.state }).catch();
   };
 
   onChange = e => {
