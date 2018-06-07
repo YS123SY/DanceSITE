@@ -5,6 +5,7 @@ import Accordion from "./Accordion";
 import Swiped from "./Swiped";
 import MultyDancer from "./MultyDancer";
 import SearchBar from "./SearchBar";
+import CountDown from "./CountDown";
 
 class HomePage extends Component {
   render() {

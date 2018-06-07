@@ -21,9 +21,10 @@
   border: 2px solid black;
   width: 60%;
 }
-.span-annonce {
+.span-category {
 }
 .all-span {
+  padding-left: 20px;
   display: flex;
   width: 10%;
   font-family: "Times New Roman", Times, serif;

@@ -37,7 +37,7 @@ class Annonces extends React.Component {
                     <span className="span-annonce">{el.pseudo} </span>
                     <span className="span-annonce">{el.age} </span>
                     <span className="span-annonce">{el.ville} </span>
-                    <span className="span-annonce">{el.category} </span>
+                    <span className="span-category">{el.category} </span>
                   </div>
                   <div className="annonce-div-user"> {el.annonce} </div>
                 </div>

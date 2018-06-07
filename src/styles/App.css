@@ -25,3 +25,9 @@
   background-color: #064e82;
   border-color: #46b8da;
 }
+.timecontainer {
+  position: absolute;
+  right: 0;
+  top: 110px;
+  min-width: 10%;
+}
