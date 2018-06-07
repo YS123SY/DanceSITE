@@ -63,7 +63,11 @@ class SearchBar extends React.Component {
       ]
     };
   }
-
+  onChangeAnnonce = e => {
+    this.setState({
+      annonce: e.target.value
+    });
+  };
   render() {
     return (
       <div className="search-div">
@@ -80,9 +84,6 @@ class SearchBar extends React.Component {
               <p className="parag-search"> {el}</p>
             </div>
           ))}
-          <Link to="">
-            <input className="btn-search" type="button" value="Let's Go" />
-          </Link>
         </div>
       </div>
     );

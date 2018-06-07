@@ -11,25 +11,29 @@ class Evenements extends React.Component {
     return (
       <div className="event-div">
         <h1 className="event-title">Evenements </h1>
-        <div>
-          <h5>photo de l'évenement</h5>
-          <img src="" />
-        </div>
-        <div>
-          <h5>Nom de l'évenement</h5>
-          <input />
-        </div>
-        <div>
-          <h5>Lieu</h5>
-          <input className="" />
-        </div>
-        <div>
-          <h5>Date/Heures</h5>
-          <input className="" />
-        </div>
-        <div>
-          <h5>Description </h5>
-          <input className="" />
+        <h2 className="sous-title">Créer un évenement </h2>
+
+        <div className="column-div">
+          <div className="row-div">
+            <h3 className="h3-title">photo de l'évenement</h3>
+            <img src="" />
+          </div>
+          <div className="row-div">
+            <h3 className="h3-title">Nom de l'évenement</h3>
+            <input />
+          </div>
+          <div className="row-div">
+            <h3 className="h3-title">Lieu</h3>
+            <input className="" />
+          </div>
+          <div className="row-div">
+            <h3 className="h3-title">Date/Heures</h3>
+            <button />
+          </div>
+          <div className="row-div">
+            <h3 className="h3-title">Description </h3>
+            <input className="" />
+          </div>
         </div>
       </div>
     );
