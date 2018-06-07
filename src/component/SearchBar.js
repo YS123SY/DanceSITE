@@ -19,23 +19,50 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      category: []
+      category: [
+        {
+          name: "Soirée",
+          isSelected: false
+        },
+        {
+          name: "Zumba",
+          isSelected: false
+        },
+        {
+          name: "Salsa",
+          isSelected: false
+        },
+        {
+          name: "Oriental",
+          isSelected: false
+        },
+        {
+          name: "tango",
+          isSelected: false
+        },
+        {
+          name: "Tae Bo",
+          isSelected: false
+        },
+        {
+          name: "Street Dance",
+          isSelected: false
+        },
+        {
+          name: "bachata",
+          isSelected: false
+        },
+        {
+          name: "Danse de salon",
+          isSelected: false
+        },
+        {
+          name: "Compétition",
+          isSelected: false
+        }
+      ]
     };
   }
-
-  onChangeCategory = event => {
-    const category = event.target.value;
-
-    if (this.state.category.indexOf(category) < 0) {
-      return this.setState({
-        category: this.state.category.concat(category)
-      });
-    } else {
-      this.setState({
-        category: this.state.category.filter(el => el !== category)
-      });
-    }
-  };
 
   render() {
     return (

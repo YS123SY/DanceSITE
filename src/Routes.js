@@ -8,6 +8,7 @@ import Swiped from "./component/Swiped";
 import Dancer from "./component/Dancer";
 import MultyDancer from "./component/MultyDancer";
 import Annonces from "./component/Annonces";
+import Evenements from "./component/Evenements";
 
 class Routes extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class Routes extends React.Component {
         <Route path="/connection" component={Connection} />
         <Route path="/dancers" component={MultyDancer} />
         <Route path="/annonces" component={Annonces} />
+        <Route path="/evenements" component={Evenements} />
 
         <Route
           path="/dancer/:id"

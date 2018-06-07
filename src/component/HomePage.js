@@ -11,6 +11,7 @@ class HomePage extends Component {
   render() {
     return (
       <div className="Body">
+        <h1 className="welcome-title">Welcome </h1>
         <Accordion />
         <Swiped />
         <SearchBar />
