@@ -3,7 +3,6 @@ const bodyParser = require("body-parser");
 
 const { mongoose } = require("./Connection/connection");
 const { User } = require("./mongoose/model/User");
-const { Event } = require("./mongoose/model/Event");
 
 const app = express();
 app.use(express.json({ limit: "50mb" }));
@@ -14,14 +13,6 @@ app.post("/add_users", (req, res) => {
   let newUser = new User({ ...req.body });
 
   newUser.save((err, data) => {
-    if (err) res.status(401).send(err);
-    res.send(data);
-  });
-});
-app.post("/add_event", (req, res) => {
-  let newEvent = new Event({ ...req.body });
-
-  newEvent.save((err, data) => {
     if (err) res.status(401).send(err);
     res.send(data);
   });
