@@ -18,10 +18,16 @@ app.post("/add_users", (req, res) => {
     res.send(data);
   });
 });
-app.post("/add_event", (req, res) => {
+app.post("/add_events", (req, res) => {
   let newEvent = new Event({ ...req.body });
 
   newEvent.save((err, data) => {
+    if (err) res.status(401).send(err);
+    res.send(data);
+  });
+});
+app.get("/evenements", (req, res) => {
+  Event.find((err, data) => {
     if (err) res.status(401).send(err);
     res.send(data);
   });
