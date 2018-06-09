@@ -2,10 +2,56 @@
   font-size: 50px;
   color: azure;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.center-even {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.column-div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
 }
 .sous-title {
+  display: flex;
   color: aqua;
-  margin-left: 30px;
-  font-size: 25px;
+  font-size: xx-large;
+  height: 0px;
+  margin-bottom: 50px;
+  justify-content: start;
+}
+.row-div {
+  display: flex;
+  margin-top: 50px;
+  width: 100%;
+  color: yellowgreen;
+  margin-bottom: 30px;
+}
+.div-title {
+  height: 35px;
+  width: 152px;
+  font-size: large;
+  background-color: linen;
+  color: black;
+  padding-top: 5px;
+  border-left-width: 5px;
+  padding: 5px 5px 5px 5px;
+  width: auto;
+}
+.div-content {
+  margin-left: 50px;
+}
+.div-content-des {
+  margin-left: 50px;
+}
+
+.input-des {
+  width: 600px;
+  height: 200px;
+  color: black;
+  font-size: large;
+  font-family: sans-serif;
 }

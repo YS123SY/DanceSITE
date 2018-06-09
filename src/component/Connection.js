@@ -50,7 +50,7 @@ class Connection extends React.Component {
           <div className="loinput-div">
             <span className="lospan-signIn">password</span>
             <input
-              type="holderspace"
+              type="password"
               value={this.state.password}
               className="input"
               placeholder="Password"

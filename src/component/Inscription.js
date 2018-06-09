@@ -184,7 +184,7 @@ class Inscription extends React.Component {
           <div className="input-div">
             <span className="span-signIn">Password</span>
             <input
-              type="holderspace"
+              type="password"
               value={this.state.password}
               className="input"
               placeholder="password"
@@ -195,7 +195,7 @@ class Inscription extends React.Component {
           <div className="input-div">
             <span className="span-signIn">Confirmation Password</span>
             <input
-              type="holderspace"
+              type="password"
               value={this.state.confirme}
               className="input"
               placeholder="confirme password"
@@ -206,7 +206,7 @@ class Inscription extends React.Component {
 
           <div className="submit-div">
             <button className="btn-create" onClick={() => this.addUser()}>
-              Submit
+              Done
             </button>
           </div>
         </div>
