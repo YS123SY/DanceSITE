@@ -4,6 +4,7 @@ import "../styles/Dancer.css";
 import { Link } from "react-router-dom";
 import Rating from "./Rating";
 import Drop from "./Drop";
+import Tags from "./TagComplite/Tags";
 
 class Dancer extends React.Component {
   constructor(props) {
@@ -12,7 +13,8 @@ class Dancer extends React.Component {
       dancer: {},
       update: false,
       isNull: true,
-      image: ""
+      image: "",
+      category: []
     };
   }
   componentDidMount = () => {
@@ -42,7 +44,8 @@ class Dancer extends React.Component {
         sexe: value.sexe,
         image: value.image,
         ville: value.ville,
-        annonce: value.annonce
+        annonce: value.annonce,
+        category: value.category
       })
       .then(res => {
         this.setState({
@@ -116,8 +119,20 @@ class Dancer extends React.Component {
       reader.readAsDataURL(file);
     }
   };
+  Addtags = tag => {
+    const { category } = this.state;
+    category.push(tag);
+    this.setState({ category });
+  };
+  onDelete = chip => {
+    const { category } = this.state;
+    category.filter(v => v !== chip);
+    this.setState({ category });
+  };
   render() {
     const { update, isNull } = this.state;
+    console.log(this.state.category);
+
     return (
       <div className="column">
         <div className="row">
@@ -184,24 +199,27 @@ class Dancer extends React.Component {
               <h4>
                 <span className="span">Category : </span>
                 {update ? (
-                  <input
-                    value={this.state.category}
-                    className="input"
-                    onChange={this.onChangeCategory}
+                  <Tags
+                    addTags={this.Addtags}
+                    OnDeleteTags={this.onDelete}
+                    tags={this.state.category}
                   />
                 ) : this.state.category === null ? (
                   <p />
                 ) : (
-                  this.state.dancer.hasOwnProperty("category") &&
-                  this.state.category.join(", ")
+                  <p>
+                    {this.state.category.map((el, i) => {
+                      return <p>{el}</p>;
+                    })}
+                  </p>
                 )}
               </h4>
 
               {update ? (
                 <button
                   className="btn-user"
-                  onClick={() =>
-                    this.onUpdate({
+                  onClick={() => {
+                    return this.onUpdate({
                       pseudo: this.state.pseudo,
                       age: this.state.age,
                       sexe: this.state.sexe,
@@ -209,8 +227,8 @@ class Dancer extends React.Component {
                       category: this.state.category,
                       annonce: this.state.annonce,
                       image: this.state.image
-                    })
-                  }
+                    });
+                  }}
                 >
                   Done
                 </button>

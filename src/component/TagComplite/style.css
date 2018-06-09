@@ -1,0 +1,36 @@
+.div-tags {
+  width: 100% !important;
+  margin: 5px !important;
+}
+.my-css-class {
+  background: #fff !important;
+  border-color: gray !important;
+  margin-bottom: 5px !important;
+}
+.tags-container {
+  width: 100% !important;
+}
+.theme_tag__25f {
+  background-color: #cc6633 !important;
+  color: #fff !important;
+}
+.theme_root__3tk {
+  border-radius: 5px !important;
+  font-size: 9px !important;
+  margin-bottom: 5px !important;
+  width: 100% !important;
+}
+.theme_inputContainer__1zi input {
+  color: #666 !important;
+}
+.theme_suggestions__LVq {
+  color: #cc6633 !important;
+}
+@media (max-width: 500px) {
+  .div-tags {
+    display: flex;
+    width: 70% !important;
+    margin: 5px !important;
+    width: calc(60vw - 35px - 20px) !important;
+  }
+}
