@@ -1,5 +1,6 @@
 import React from "react";
 import Drop from "./Drop";
+import axios from "axios";
 import "../styles/Evenements.css";
 
 class Evenements extends React.Component {
@@ -34,8 +35,10 @@ class Evenements extends React.Component {
       reader.readAsDataURL(file);
     }
   };
-  addEvent = () => {};
 
+  addEvent = () => {
+    axios.post("/add_event", { ...this.state }).catch();
+  };
   render() {
     return (
       <div className="event-div">
@@ -111,10 +114,12 @@ class Evenements extends React.Component {
               </div>
             </div>
             <button className="btn-event" onClick={() => this.addEvent()}>
-              {" "}
-              Done{" "}
+              Done
             </button>
           </div>
+        </div>
+        <div className="">
+          <div className=""> </div>
         </div>
       </div>
     );

@@ -14,7 +14,6 @@ class HomePage extends Component {
         <h1 className="welcome-title">Welcome </h1>
         <Accordion />
         <Swiped />
-        <SearchBar />
       </div>
     );
   }
