@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 
 const { mongoose } = require("./Connection/connection");
 const { User } = require("./mongoose/model/User");
+const { Event } = require("./mongoose/model/Event");
 
 const app = express();
 app.use(express.json({ limit: "50mb" }));
