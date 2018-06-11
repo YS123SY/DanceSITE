@@ -7,6 +7,7 @@ class Evenements extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      evenements: [],
       event: "",
       lieu: "",
       image: "",
@@ -20,7 +21,13 @@ class Evenements extends React.Component {
       [e.target.name]: e.target.value
     });
   };
-
+  componentDidMount = () => {
+    axios.get(`/evenements`).then(res => {
+      this.setState({
+        evenements: res.data
+      });
+    });
+  };
   onDrop = accepted => {
     const files = accepted;
     if (files && files.length > 0) {
@@ -37,7 +44,7 @@ class Evenements extends React.Component {
   };
 
   addEvent = () => {
-    axios.post("/add_event", { ...this.state }).catch();
+    axios.post("/add_events", { ...this.state }).catch();
   };
   render() {
     return (
@@ -119,7 +126,24 @@ class Evenements extends React.Component {
           </div>
         </div>
         <div className="">
-          <div className=""> </div>
+          {this.state.evenements.map((el, i) => {
+            return (
+              <div className="input-div-event">
+                <div className="annonce-event-div">
+                  <div className="image-event">
+                    <img src={el.image} />
+                  </div>
+                  <div className="all-event">
+                    <span className="span-event">{el.event} </span>
+                    <span className="span-event">{el.lieu} </span>
+                    <span className="span-event"> {el.date}</span>
+                    <span className="span-event"> {el.time}</span>
+                  </div>
+                  <div className="event-div-user"> {el.description} </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     );
